@@ -10,15 +10,12 @@ Rectangle::Rectangle()
 	point.y = 1.0f;
 	dimensions.width = 4.0f;
 	dimensions.height = 4.0f;
-
-	std::cout << "Default Constructor...\n";
 }
 
 //Parameterized constructor
 Rectangle::Rectangle(Point2D _point, Dimensions _dimentions) :
 	point(_point), dimensions(_dimentions) 
 {
-	std::cout << "Parameterized Constructor...\n";
 }
 
 //Copy constructor
@@ -26,7 +23,6 @@ Rectangle::Rectangle(const Rectangle& _rectangle)
 {
 	this->point = _rectangle.point;
 	this->dimensions = _rectangle.dimensions;
-	std::cout << "Copy Constructor...\n";
 }
 
 // Move contructor
@@ -34,20 +30,16 @@ Rectangle::Rectangle(Rectangle&& otherRect)
 {
 	this->point = otherRect.point;
 	this->dimensions = otherRect.dimensions;
-	std::cout << "Move Constructor...\n";
 }
 
 Rectangle::~Rectangle()
 {
-	std::cout << "Deconstruct...\n";
 }
 
 Rectangle& Rectangle::operator=(const Rectangle& otherRect)
 {
 	this->point = otherRect.point;
 	this->dimensions = otherRect.dimensions;
-
-	std::cout << "Ref Copy...\n";
 
 	return *this;
 }
@@ -56,8 +48,6 @@ Rectangle& Rectangle::operator=(Rectangle&& otherRect)
 {
 	this->point = otherRect.point;
 	this->dimensions = otherRect.dimensions;
-
-	std::cout << "rvalue Copy...\n";
 
 	return *this;
 }

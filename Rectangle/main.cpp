@@ -23,8 +23,6 @@ int main(int argv, char** argc) {
 
 	r6 = r3; // reference copy
 
-	std::cout << std::endl << std::endl;
-
 	std::cout << "Rectangle 1: " << &r1 << std::endl;
 	std::cout << "Rectangle 2: " << &r2 << std::endl;
 	std::cout << "Rectangle 3: " << &r3 << std::endl;
