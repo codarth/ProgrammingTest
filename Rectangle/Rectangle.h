@@ -36,15 +36,15 @@ public:
 	bool isPointIn(Point2D otherPoint);
 	bool isIntersecting(const Rectangle* otherRect);
 
-	Point2D* GetPoint();
-	Dimensions* GetDimensions();
+	Point2D GetPoint();
+	Dimensions GetDimensions();
 
 	void SetPoint(Point2D _point);
 	void SetDimensions(Dimensions _dimensions);
 
 private:
-	Point2D* point = new Point2D;
-	Dimensions* dimensions = new Dimensions;
+	Point2D point;
+	Dimensions dimensions;
 };
 
 std::ostream& operator<<(std::ostream& out, Rectangle* rect);

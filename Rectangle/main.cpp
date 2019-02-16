@@ -21,7 +21,7 @@ int main(int argv, char** argc) {
 	///prvalue move after construction
 	Rectangle r6 = Rectangle();
 
-	r4 = r3; // reference copy
+	r6 = r3; // reference copy
 
 	std::cout << std::endl << std::endl;
 
@@ -29,6 +29,7 @@ int main(int argv, char** argc) {
 	std::cout << "Rectangle 2: " << &r2 << std::endl;
 	std::cout << "Rectangle 3: " << &r3 << std::endl;
 	std::cout << "Rectangle 4: " << &r4 << std::endl;
+	std::cout << "Rectangle 6: " << &r6 << std::endl;
 
 	std::cout << std::endl << std::endl;
 
@@ -57,7 +58,7 @@ int main(int argv, char** argc) {
 	{
 		std::cout << "r3 is NOT intersecting r2.\n";
 	}
-
+	
 	r2.SetPoint({ 6.0f, 1.0f }); // Move r2
 	std::cout << "After moving r2: " << &r2 << std::endl;
 
@@ -69,17 +70,6 @@ int main(int argv, char** argc) {
 	{
 		std::cout << "r3 is NOT intersecting r2.\n";
 	}
-
-	r1.~Rectangle();
-
-	r2.~Rectangle();
-
-	r3.~Rectangle();
-
-	r4.~Rectangle();
-
-	r6.~Rectangle();
-
 
 	return 0;
 }
